@@ -1,0 +1,185 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body and Background */
+body {
+    background: url("images/genbg.jpg") no-repeat center center fixed;
+    background-size: cover;
+    font-family: "DM Sans";
+}
+
+/* Navbar Styles */
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 2rem;
+    backdrop-filter: blur(10px);
+    width: 100%;
+    z-index: 100;
+    background: rgba(0, 0, 0, 0);
+}
+
+.logo img {
+    width: 150px;
+}
+
+.nav-links {
+    display: flex;
+    gap: 2rem;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    padding: 0.5rem 1rem;
+    transition: color 0.3s, border 0.3s;
+}
+
+.nav-links a:hover {
+    color: #b386c5;
+}
+
+.nav-links .active {
+    border: 2px solid transparent;
+    border-image: linear-gradient(to right, rgb(0, 132, 255), rgb(218, 54, 144), rgb(255, 0, 200));
+    border-image-slice: 1;
+    /* border-radius: 8px; */
+}
+
+/* Responsive Navbar */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        align-items: center;
+        padding: 1rem;
+    }
+
+    .nav-links {
+        gap: 1rem;
+        margin-top: 1rem;
+    }
+}
+
+
+
+.meter-section {
+    text-align: center;
+    color: #ffffff;
+  }
+  
+/* Placeholder for meter image */
+.meter-image {
+    width: 100%;
+    max-width: 300px;
+    height: 250px;
+    margin: 0 auto 0;
+    border-radius: 50%;
+    overflow: hidden; /* Ensures the image stays within the circle */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.meter-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures the image covers the circle without distortion */
+}
+
+  
+  .percentage {
+    font-size: 3em;
+    font-weight: bold;
+    margin: 10px 0;
+  }
+  
+  .subtext {
+    font-size: 1.2em;
+    color: #aaa;
+  }
+  
+  .levels {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+  }
+  
+  .level {
+    text-align: center;
+    margin: 0px 20px;
+  }
+  
+  .level-circle {
+    width: 80px;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    background-color: #3333333b;
+    border: 2px solid purple;
+    border-radius: 50%;
+    font-size: 1em;
+    color: #ffffff;
+  }
+  
+  /* Responsive design */
+  @media (max-width: 500px) {
+    .levels {
+      flex-direction: column;
+      gap: 20px;
+    }
+  }
+  
+
+
+  .label-container {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.label-box {
+    display: flex;
+    align-items: center;
+    padding: 1rem;
+    background-color: #f5f5f525;
+    border-radius: 8px;
+    min-width: 100px;
+    flex: 1;
+    max-width: 200px;
+    text-align: center;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.label-box .icon {
+    font-size: 1.5rem;
+    margin-right: 0.5rem;
+}
+
+.label-box .text {
+    font-size: 1rem;
+    color: #ffffff;
+}
+
+.label-box strong {
+    font-weight: bold;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+    .label-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .label-box {
+        max-width: 100%;
+    }
+}

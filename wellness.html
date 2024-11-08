@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wellness</title>
+    <link rel="stylesheet" href="wellness.css">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;1,9..40,300&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav>
+        <!-- Navigation Bar -->
+         <div class="nav-container">
+            <div class="logo">
+                <img src="images/wellness logo.png" alt="Wellness Logo" class="logo-img">
+            </div>
+             <button class="login-btn" id="loginButton">Log in</button>
+            </div>
+
+        <!-- Header -->
+         <header>
+            <h1>Your gateway to a healthier and happier workplace</h1>
+            <div class="partners">
+                <img src="images/companys.png" alt="Partner 1" class="partner-img">
+                <img src="images/graphpng.png" alt="Partner 2" class="partner-img">
+            </div>
+         </header>
+
+         <!-- Offering Section -->
+          <section class="offerings">
+            <h2>Offerings</h2>
+            <div class="card-container">
+                <!-- Card 1 -->
+                <div class="card">
+                    <img src="/images/Healthcare.webp.png" alt="Health">
+                    <div class="overlay">
+                        <h3>Health</h3>
+                    </div>
+                </div>
+        
+                <!-- Card 2 -->
+                <div class="card">
+                    <img src="images/Mental-health.jpg" alt="Mental Wellness">
+                    <div class="overlay">
+                        <h3>Mental Wellness</h3>
+                    </div>
+                </div>
+        
+                <!-- Card 3 -->
+                <div class="card">
+                    <img src="images/mobile-phone-coins-money-and-growth-graph-depict-financial.jpg" alt="Finance">
+                    <div class="overlay">
+                        <h3>Finance</h3>
+                    </div>
+                </div>
+            </div>
+          </section>
+
+          <!-- Footer Section -->
+           <footer>
+            <p>Follow us for latest updates</p>
+            <a href="#"><img src="images/fb.jpg" alt="Facebook"></a>
+            <a href="#"><img src="images/x.png" alt="X"></a>
+            <a href="#"><img src="images/ig.jpg" alt="Instagram"></a>
+           </footer>
+    </nav>
+
+    <div id="popupOverlay" style="display: none;">
+        <div id="popupForm">
+            <h3>Login</h3>
+            
+            <!-- Company Name Dropdown -->
+            <label for="company">Company Name:</label>
+            <select id="company" required>
+                <option value="" disabled selected>Select your company</option>
+                <option value="Company1">TCS</option>
+                <option value="Company2">Infosis</option>
+                <option value="Company3">Capgemini 3</option>
+                <option value="Company4">Deloitte</option>
+                <option value="Company5">Cognizant</option>
+            </select>
+    
+            <!-- Username Input -->
+            <label for="username">Username:</label>
+            <input type="text" id="username" required>
+    
+            <!-- Password Input -->
+            <label for="password">Password:</label>
+            <input type="password" id="password" required>
+    
+            <!-- Action Buttons -->
+            <div id="buttonContainer">
+                <button id="closeButton">Close</button>
+                <button id="submitButton">Submit</button>
+            </div>
+        </div>
+    </div>
+    
+</body>
+<script src="wellness.js"></script>
+</html>

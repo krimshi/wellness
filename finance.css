@@ -1,0 +1,126 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body and Background */
+body {
+    background: url("images/genbg.jpg") no-repeat center center fixed;
+    background-size: cover;
+    font-family: "DM Sans";
+}
+
+/* Navbar Styles */
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 2rem;
+    backdrop-filter: blur(10px);
+    width: 100%;
+    z-index: 100;
+    background: rgba(0, 0, 0, 0);
+}
+
+.logo img {
+    width: 150px;
+}
+
+.nav-links {
+    display: flex;
+    gap: 2rem;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    padding: 0.5rem 1rem;
+    transition: color 0.3s, border 0.3s;
+}
+
+.nav-links a:hover {
+    color: #b386c5;
+}
+
+.nav-links .active {
+    border: 2px solid transparent;
+    border-image: linear-gradient(to right, rgb(0, 132, 255), rgb(218, 54, 144), rgb(255, 0, 200));
+    border-image-slice: 1;
+    /* border-radius: 8px; */
+}
+
+/* Responsive Navbar */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        align-items: center;
+        padding: 1rem;
+    }
+
+    .nav-links {
+        gap: 1rem;
+        margin-top: 1rem;
+    }
+}
+
+
+
+.image-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+    padding: 0 20%;
+}
+
+.image-container img {
+    max-width: 100%;
+    height: auto; /* Allow image to scale proportionally */
+    object-fit: contain;
+}
+
+/* Media query for responsiveness */
+@media (max-width: 768px) {
+    .image-container {
+        padding: 0 10%; /* Reduce padding on smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .image-container {
+        padding: 0 5%; /* Further reduce padding for very small screens */
+    }
+}
+
+
+.income-section {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+  }
+  
+  .label {
+    flex: 0.4;
+  }
+  
+  h5 {
+    color: #ffffff;
+    font-size: 1em;
+  }
+  
+  h1 {
+    font-size: 1.5em;
+    font-weight: bold;
+    display: inline-block;
+    background: linear-gradient(45deg, rgb(0, 132, 255), rgb(218, 54, 144), rgb(255, 0, 200));
+    background-clip: text;
+    color: transparent;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-top: 0.5em;
+  }
+  

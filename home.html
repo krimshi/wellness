@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Home</title>
+<link rel="stylesheet" href="home.css">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;1,9..40,300&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<!-- Navbar HTML -->
+<nav class="navbar">
+    <div class="logo">
+        <img src="/images/wellness logo.png" alt="Logo">
+    </div>
+    <div class="nav-links">
+        <a href="home.html" class="active">Home</a>
+        <a href="health.html">Health</a>
+        <a href="mental_wellness.html">Mental Wellness</a>
+        <a href="finance.html">Finance</a>
+    </div>
+</nav>
+
+<!-- Banner Section -->
+<div class="banner-container">
+    <div class="banners" id="banners">
+        <div class="banner">
+            <img src="images/banner1.jpg" alt="Banner 1">
+        </div>
+        <div class="banner">
+            <img src="images/banner2.png" alt="Banner 2">
+        </div>
+        <div class="banner">
+            <img src="images/banner3.jpg" alt="Banner 3">
+        </div>
+    </div>
+    <div class="dots">
+        <div class="dot active" onclick="jumpToBanner(0)"></div>
+        <div class="dot" onclick="jumpToBanner(1)"></div>
+        <div class="dot" onclick="jumpToBanner(2)"></div>
+    </div>
+    <div class="click-area left-area" onclick="shiftLeft()"></div>
+    <div class="click-area right-area" onclick="shiftRight()"></div>
+</div>
+
+<div class="quota">
+<div class="quote-container">
+    <p class="quote">"Investing in employee <span>Wellness</span> <br> is investing in your company's <span>Success</span>"</p>
+</div>
+</div>
+
+<script>
+let currentBanner = 0;
+const banners = document.getElementById("banners");
+const dots = document.querySelectorAll(".dot");
+const totalBanners = dots.length;
+
+// Auto shift every 3 seconds
+setInterval(() => shiftRight(), 3000);
+
+// Update banner position
+function updateBanner() {
+    banners.style.transform = `translateX(-${currentBanner * 100}%)`;
+    dots.forEach(dot => dot.classList.remove("active"));
+    dots[currentBanner].classList.add("active");
+}
+
+// Shift to the right
+function shiftRight() {
+    currentBanner = (currentBanner + 1) % totalBanners;
+    updateBanner();
+}
+
+// Shift to the left
+function shiftLeft() {
+    currentBanner = (currentBanner - 1 + totalBanners) % totalBanners;
+    updateBanner();
+}
+
+// Jump to specific banner
+function jumpToBanner(index) {
+    currentBanner = index;
+    updateBanner();
+}
+</script>
+</body>
+</html>
